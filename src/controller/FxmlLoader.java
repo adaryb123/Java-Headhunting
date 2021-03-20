@@ -22,7 +22,7 @@ public class FxmlLoader {
                  view = new FXMLLoader().load(fileURL);
              }
              catch (Exception e) {
-                 System.out.println("Unable to load page " + fileName);
+                 System.out.println(e.getMessage());
              }
              return view;
          }

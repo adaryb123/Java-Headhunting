@@ -1,10 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneAddFreelancer">
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneAddFreelancer">
    <children>
-      <Label layoutX="219.0" layoutY="142.0" text="This is add freelancer" />
+      <ScrollPane hbarPolicy="NEVER" layoutY="1.0" prefHeight="987.0" prefWidth="594.0">
+         <content>
+            <AnchorPane prefHeight="878.0" prefWidth="591.0">
+               <children>
+                  <Label layoutX="108.0" layoutY="41.0" text="Full name" />
+                  <TextField layoutX="243.0" layoutY="539.0" />
+                  <Label layoutX="54.0" layoutY="83.0" text="Required daily wage" />
+                  <Label layoutX="56.0" layoutY="119.0" text="Years of experience" />
+                  <Label layoutX="108.0" layoutY="154.0" text="Education" />
+                  <SplitMenuButton layoutX="205.0" layoutY="150.0" mnemonicParsing="false" text="SplitMenuButton">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </SplitMenuButton>
+                  <Spinner layoutX="205.0" layoutY="115.0" />
+                  <Spinner layoutX="205.0" layoutY="79.0" />
+                  <RadioButton layoutX="199.0" layoutY="242.0" mnemonicParsing="false" text="Programmer" />
+                  <RadioButton layoutX="196.0" layoutY="460.0" mnemonicParsing="false" text="Administrator" />
+                  <RadioButton layoutX="201.0" layoutY="315.0" mnemonicParsing="false" text="Consultant" />
+                  <Label layoutX="234.0" layoutY="208.0" text="Pick category" />
+                  <Label layoutX="132.0" layoutY="275.0" text="Preffered language" />
+                  <SplitMenuButton layoutX="279.0" layoutY="271.0" mnemonicParsing="false" text="SplitMenuButton">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </SplitMenuButton>
+                  <RadioButton layoutX="214.0" layoutY="375.0" mnemonicParsing="false" text="Yes" />
+                  <RadioButton layoutX="214.0" layoutY="409.0" mnemonicParsing="false" text="No" />
+                  <Label layoutX="144.0" layoutY="345.0" text="Also a NBU kybersecurity auditor?" />
+                  <SplitMenuButton layoutX="259.0" layoutY="499.0" mnemonicParsing="false" text="SplitMenuButton">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </SplitMenuButton>
+                  <Label layoutX="132.0" layoutY="503.0" text="Specialization" />
+                  <Label layoutX="113.0" layoutY="535.0" text="Preferred platform" />
+                  <TextField layoutX="205.0" layoutY="37.0" />
+                  <Separator layoutY="577.0" prefWidth="1000.0" />
+                  <Label layoutX="221.0" layoutY="594.0" text="Certificates" />
+                  <Label layoutX="153.0" layoutY="623.0" text="Certificate name" />
+                  <TextField layoutX="94.0" layoutY="651.0" />
+                  <Button layoutX="202.0" layoutY="686.0" mnemonicParsing="false" text="Add" />
+                  <TextArea layoutX="266.0" layoutY="628.0" prefHeight="179.0" prefWidth="322.0" />
+                  <Button layoutX="305.0" layoutY="830.0" mnemonicParsing="false" text="Submit" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

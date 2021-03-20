@@ -13,7 +13,8 @@ public class Administrator extends Freelancer{
         this.auditorNBU = auditorNBU;
     }
 
-    public Administrator(double dailyWage, int experienceYears, Freelancer.Education highestEducation, ArrayList<String> certificates, boolean auditorNBU) {
+    public Administrator(String name, double dailyWage, int experienceYears, Freelancer.Education highestEducation, ArrayList<String> certificates, boolean auditorNBU) {
+        this.setName(name);
         this.setDailyWage(dailyWage);
         this.setExperienceYears(experienceYears);
         this.setHighestEducation(highestEducation);

@@ -2,14 +2,12 @@ package model;
 
 public class JobOffer {
     private Company company;
-    private double dailySalary;
-    private String name;
+    private String jobTitle;
     private String info;
 
-    public JobOffer(Company company, double dailySalary, String name, String info) {
+    public JobOffer(Company company, String jobTitle, String info) {
         this.company = company;
-        this.dailySalary = dailySalary;
-        this.name = name;
+        this.jobTitle = jobTitle;
         this.info = info;
     }
 
@@ -21,20 +19,12 @@ public class JobOffer {
         this.company = company;
     }
 
-    public double getDailySalary() {
-        return dailySalary;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public void setDailySalary(double dailySalary) {
-        this.dailySalary = dailySalary;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public String getInfo() {

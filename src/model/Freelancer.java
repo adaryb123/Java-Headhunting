@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public abstract class Freelancer {
+    private String name;
     private double dailyWage;
     private int experienceYears;
     public enum Education{
@@ -14,6 +15,14 @@ public abstract class Freelancer {
     }
     private Education highestEducation;
     private ArrayList<String> certificates;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public ArrayList<String> getCertificates() {
         return certificates;

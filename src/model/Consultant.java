@@ -28,7 +28,8 @@ public class Consultant extends Freelancer{
         this.specializationField = specializationField;
     }
 
-    public Consultant(double dailyWage, int experienceYears, Education highestEducation, ArrayList<String> certificates, Specialization specializationField, String preferredPlatform) {
+    public Consultant(String name,double dailyWage, int experienceYears, Education highestEducation, ArrayList<String> certificates, Specialization specializationField, String preferredPlatform) {
+        this.setName(name);
         this.setDailyWage(dailyWage);
         this.setExperienceYears(experienceYears);
         this.setHighestEducation(highestEducation);
