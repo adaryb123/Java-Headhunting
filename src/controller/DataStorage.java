@@ -8,10 +8,10 @@ import model.JobOffer;
 import java.util.ArrayList;
 
 public class DataStorage {
-    public static ArrayList<Freelancer> freelancers;
-    public static ArrayList<Company> companies;
-    public static ArrayList<Contract> contracts;
-    public static ArrayList<JobOffer> jobOffers;
+    public static ArrayList<Freelancer> freelancers = new ArrayList<>();
+    public static ArrayList<Company> companies = new ArrayList<>();
+    public static ArrayList<Contract> contracts = new ArrayList<>();
+    public static ArrayList<JobOffer> jobOffers = new ArrayList<>();
 
     private DataStorage() {
     }

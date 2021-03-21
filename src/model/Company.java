@@ -4,21 +4,21 @@ public class Company {
     String name;
     String businessField;
     int employeesNum;
-    String logoFilepath;
+    String logoImageURI;
 
-    public Company(String name, String businessField, int employeesNum, String logoFilepath) {
+    public Company(String name, String businessField, int employeesNum, String logoImageURI) {
         this.name = name;
         this.businessField = businessField;
         this.employeesNum = employeesNum;
-        this.logoFilepath = logoFilepath;
+        this.logoImageURI = logoImageURI;
     }
 
-    public String getLogoFilepath() {
-        return logoFilepath;
+    public String getlogoImageURI() {
+        return logoImageURI;
     }
 
-    public void setLogoFilepath(String logoFilepath) {
-        this.logoFilepath = logoFilepath;
+    public void setlogoImageURI(String logoImageURI) {
+        this.logoImageURI = logoImageURI;
     }
 
     public int getEmployeesNum() {

@@ -10,9 +10,29 @@ public class ControllerSceneMain {
     private Button ButtonAddFreelancer;
 
     @FXML
+    private Button ButtonAddCompany;
+
+    @FXML
+    private Button ButtonAddJobOffer;
+
+    @FXML
+    void ButtonAddCompanyOnAction(ActionEvent event) {
+        WindowReference.getParentController().switchToAddCompany();
+    }
+
+    @FXML
     void ButtonAddFreelancerOnAction(ActionEvent event) {
         WindowReference.getParentController().switchToAddFreelancer();
     }
 
+    @FXML
+    void ButtonAddJobOfferOnAction(ActionEvent event) {
+        WindowReference.getParentController().switchToAddJobOffer();
+    }
+
+
+    public void init(){
+
+    }
 }
 

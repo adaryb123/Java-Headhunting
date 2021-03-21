@@ -3,38 +3,22 @@ package model;
 import java.util.ArrayList;
 
 public class Consultant extends Freelancer{
-    public enum Specialization{
-        APPLICATION,
-        NETWORK,
-        SAP,
-        OTHER
-    }
-    private Specialization specializationField;
-    private String preferredPlatform;
+    private boolean auditorNBU;
 
-    public String getPreferredPlatform() {
-        return preferredPlatform;
+    public boolean isAuditorNBU() {
+        return auditorNBU;
     }
 
-    public void setPreferredPlatform(String preferredPlatform) {
-        this.preferredPlatform = preferredPlatform;
+    public void setAuditorNBU(boolean auditorNBU) {
+        this.auditorNBU = auditorNBU;
     }
 
-    public Specialization getSpecializationField() {
-        return specializationField;
-    }
-
-    public void setSpecializationField(Specialization specializationField) {
-        this.specializationField = specializationField;
-    }
-
-    public Consultant(String name, int dailyWage, int experienceYears, Education highestEducation, ArrayList<String> certificates, Specialization specializationField, String preferredPlatform) {
+    public Consultant(String name, int dailyWage, int experienceYears, Freelancer.Education highestEducation, ArrayList<String> certificates, boolean auditorNBU) {
         this.setName(name);
         this.setDailyWage(dailyWage);
         this.setExperienceYears(experienceYears);
         this.setHighestEducation(highestEducation);
         this.setCertificates(certificates);
-        this.specializationField = specializationField;
-        this.preferredPlatform = preferredPlatform;
+        this.auditorNBU = auditorNBU;
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,6 +10,7 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneAddFreelancer">
@@ -18,22 +20,37 @@
             <AnchorPane prefHeight="878.0" prefWidth="591.0">
                <children>
                   <Label layoutX="108.0" layoutY="41.0" text="Full name" />
-                  <TextField fx:id="TextFieldPreferredPlatform" layoutX="243.0" layoutY="539.0" />
-                  <Label layoutX="54.0" layoutY="83.0" text="Required daily wage" />
+                  <Group fx:id="GroupAdministrator" disable="true" layoutX="113.0" layoutY="499.0">
+                     <children>
+                        <TextField fx:id="TextFieldPreferredPlatform" layoutX="130.0" layoutY="40.0" />
+                        <Label layoutX="19.0" layoutY="4.0" text="Specialization" />
+                        <Label layoutY="36.0" text="Preferred platform" />
+                        <ComboBox fx:id="ComboBoxSpecialization" layoutX="129.0" prefWidth="150.0" />
+                     </children>
+                  </Group>
+                  <Label layoutY="83.0" text="Required daily wage (EUR/day)" />
                   <Label layoutX="56.0" layoutY="119.0" text="Years of experience" />
                   <Label layoutX="108.0" layoutY="154.0" text="Education" />
                   <Spinner fx:id="SpinnerYearsOfExperience" editable="true" layoutX="205.0" layoutY="115.0" />
                   <Spinner fx:id="SpinnerDailyWage" editable="true" layoutX="205.0" layoutY="79.0" />
-                  <RadioButton fx:id="RadioButtonProgrammer" layoutX="199.0" layoutY="242.0" mnemonicParsing="false" text="Programmer" />
-                  <RadioButton fx:id="RadioButtonAdministrator" layoutX="196.0" layoutY="460.0" mnemonicParsing="false" text="Administrator" />
-                  <RadioButton fx:id="RadioButtonConsultant" layoutX="201.0" layoutY="315.0" mnemonicParsing="false" text="Consultant" />
+                  <RadioButton fx:id="RadioButtonProgrammer" layoutX="199.0" layoutY="242.0" mnemonicParsing="false" onAction="#RadioButtonProgrammerOnAction" selected="true" text="Programmer">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ToggleGroup3Buttons" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="RadioButtonAdministrator" layoutX="196.0" layoutY="460.0" mnemonicParsing="false" onAction="#RadioButtonAdministratorOnAction" text="Administrator" toggleGroup="$ToggleGroup3Buttons" />
+                  <RadioButton fx:id="RadioButtonConsultant" layoutX="201.0" layoutY="315.0" mnemonicParsing="false" onAction="#RadioButtonConsultantOnAction" text="Consultant" toggleGroup="$ToggleGroup3Buttons" />
                   <Label layoutX="234.0" layoutY="208.0" text="Pick category" />
-                  <Label layoutX="132.0" layoutY="275.0" text="Preffered language" />
-                  <RadioButton fx:id="RadioButtonYes" layoutX="214.0" layoutY="375.0" mnemonicParsing="false" text="Yes" />
-                  <RadioButton fx:id="RadioButtonNo" layoutX="214.0" layoutY="409.0" mnemonicParsing="false" text="No" />
-                  <Label layoutX="144.0" layoutY="345.0" text="Also a NBU kybersecurity auditor?" />
-                  <Label layoutX="132.0" layoutY="503.0" text="Specialization" />
-                  <Label layoutX="113.0" layoutY="535.0" text="Preferred platform" />
+                  <Group fx:id="GroupConsultant" disable="true" layoutX="161.0" layoutY="345.0">
+                     <children>
+                        <Label text="Also a NBU kybersecurity auditor?" />
+                        <RadioButton fx:id="RadioButtonYes" layoutX="92.0" layoutY="36.0" mnemonicParsing="false" selected="true" text="Yes">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="ToggleGroup2Buttons" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="RadioButtonNo" layoutX="93.0" layoutY="45.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="77.0" text="No" toggleGroup="$ToggleGroup2Buttons" />
+                     </children>
+                  </Group>
                   <TextField fx:id="TextFieldFullName" layoutX="205.0" layoutY="37.0" />
                   <Separator layoutY="577.0" prefWidth="1000.0" />
                   <Label layoutX="221.0" layoutY="594.0" text="Certificates" />
@@ -43,8 +60,12 @@
                   <TextArea fx:id="TextAreaCertificates" layoutX="266.0" layoutY="628.0" prefHeight="179.0" prefWidth="322.0" />
                   <Button fx:id="ButtonSubmit" layoutX="278.0" layoutY="831.0" mnemonicParsing="false" onAction="#ButtonSubmitOnAction" text="Submit" />
                   <ComboBox fx:id="ComboBoxEducation" layoutX="204.0" layoutY="159.0" prefWidth="150.0" />
-                  <ComboBox fx:id="ComboBoxLanguage" layoutX="256.0" layoutY="271.0" prefWidth="150.0" />
-                  <ComboBox fx:id="ComboBoxSpecialization" layoutX="242.0" layoutY="499.0" prefWidth="150.0" />
+                  <Group fx:id="GroupProgrammer" layoutX="134.0" layoutY="276.0">
+                     <children>
+                        <Label layoutY="4.0" prefHeight="17.0" prefWidth="95.0" text="Preffered language" />
+                        <ComboBox fx:id="ComboBoxLanguage" layoutX="128.0" prefHeight="26.0" prefWidth="138.0" />
+                     </children>
+                  </Group>
                </children>
             </AnchorPane>
          </content>
