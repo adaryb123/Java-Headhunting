@@ -23,7 +23,7 @@ public class Programmer extends Freelancer{
         this.preferredLanguage = preferredLanguage;
     }
 
-    public Programmer(String name, double dailyWage, int experienceYears, Education highestEducation, ArrayList<String> certificates, Language preferredLanguage) {
+    public Programmer(String name, int dailyWage, int experienceYears, Education highestEducation, ArrayList<String> certificates, Language preferredLanguage) {
         this.setName(name);
         this.setDailyWage(dailyWage);
         this.setExperienceYears(experienceYears);

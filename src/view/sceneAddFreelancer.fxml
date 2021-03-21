@@ -19,11 +19,11 @@
                <children>
                   <Label layoutX="108.0" layoutY="41.0" text="Full name" />
                   <TextField fx:id="TextFieldPreferredPlatform" layoutX="243.0" layoutY="539.0" />
-                  <Label layoutX="54.0" layoutY="83.0" text="Required daily wage" />
+                  <Label layoutY="83.0" text="Required daily wage (EUR/day)" />
                   <Label layoutX="56.0" layoutY="119.0" text="Years of experience" />
                   <Label layoutX="108.0" layoutY="154.0" text="Education" />
-                  <Spinner fx:id="SpinnerYearsOfExperience" layoutX="205.0" layoutY="115.0" />
-                  <Spinner fx:id="SpinnerDailyWage" layoutX="205.0" layoutY="79.0" />
+                  <Spinner fx:id="SpinnerYearsOfExperience" editable="true" layoutX="205.0" layoutY="115.0" />
+                  <Spinner fx:id="SpinnerDailyWage" editable="true" layoutX="205.0" layoutY="79.0" />
                   <RadioButton fx:id="RadioButtonProgrammer" layoutX="199.0" layoutY="242.0" mnemonicParsing="false" text="Programmer" />
                   <RadioButton fx:id="RadioButtonAdministrator" layoutX="196.0" layoutY="460.0" mnemonicParsing="false" text="Administrator" />
                   <RadioButton fx:id="RadioButtonConsultant" layoutX="201.0" layoutY="315.0" mnemonicParsing="false" text="Consultant" />

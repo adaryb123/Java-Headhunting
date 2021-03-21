@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Freelancer {
     private String name;
-    private double dailyWage;
+    private int dailyWage;
     private int experienceYears;
     public enum Education{
         HIGH_SCHOOL,
@@ -40,11 +40,11 @@ public abstract class Freelancer {
         this.experienceYears = experienceYears;
     }
 
-    public double getDailyWage() {
+    public int getDailyWage() {
         return dailyWage;
     }
 
-    public void setDailyWage(double dailyWage) {
+    public void setDailyWage(int dailyWage) {
         this.dailyWage = dailyWage;
     }
 

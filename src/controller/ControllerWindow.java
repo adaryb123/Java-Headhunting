@@ -2,10 +2,10 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 
 public class ControllerWindow {
 
@@ -27,19 +27,21 @@ public class ControllerWindow {
 
     @FXML
     void ButtonScreen1OnAction(ActionEvent event) {
-        Pane view = FxmlLoader.getPage("sceneMain");
-        BorderPaneContent.setCenter(view);
+        FXMLLoader fxmlLoader  = SceneManager.getPage(BorderPaneContent,"sceneMain");
+        //BorderPaneContent.setCenter(view);
     }
 
     @FXML
     void ButtonScreen2OnAction(ActionEvent event) {
-        Pane view = FxmlLoader.getPage("sceneAddFreelancer");
-        BorderPaneContent.setCenter(view);
+        FXMLLoader fxmlLoader = SceneManager.getPage(BorderPaneContent,"sceneAddFreelancer");
+        ((ControllerSceneAddFreelancer) fxmlLoader.getController()).init();
+        //BorderPaneContent.setCenter(view);
     }
 
     public void switchToAddFreelancer(){
-        Pane view = FxmlLoader.getPage("sceneAddFreelancer");
-        BorderPaneContent.setCenter(view);
+        FXMLLoader fxmlLoader = SceneManager.getPage(BorderPaneContent,"sceneAddFreelancer");
+        ((ControllerSceneAddFreelancer) fxmlLoader.getController()).init();
+        //BorderPaneContent.setCenter(view);
     }
 
 }

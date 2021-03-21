@@ -2,12 +2,15 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import model.Consultant;
+import model.Freelancer;
+import model.Programmer;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ControllerSceneAddFreelancer {
 
@@ -15,10 +18,10 @@ public class ControllerSceneAddFreelancer {
     private TextField TextFieldPreferredPlatform;
 
     @FXML
-    private Spinner<?> SpinnerYearsOfExperience;
+    private Spinner<Integer> SpinnerYearsOfExperience;
 
     @FXML
-    private Spinner<?> SpinnerDailyWage;
+    private Spinner<Integer> SpinnerDailyWage;
 
     @FXML
     private RadioButton RadioButtonProgrammer;
@@ -51,13 +54,33 @@ public class ControllerSceneAddFreelancer {
     private Button ButtonSubmit;
 
     @FXML
-    private ComboBox<?> ComboBoxEducation;
+    private ComboBox<String> ComboBoxEducation;
 
     @FXML
-    private ComboBox<?> ComboBoxLanguage;
+    private ComboBox<String> ComboBoxLanguage;
 
     @FXML
-    private ComboBox<?> ComboBoxSpecialization;
+    private ComboBox<String> ComboBoxSpecialization;
+
+
+    public void init(){
+        List<String> eduValues = Stream.of(Freelancer.Education.values()).map(Freelancer.Education::name).collect(Collectors.toList());
+        ComboBoxEducation.getItems().addAll(eduValues);
+
+        List<String> languageValues = Stream.of(Programmer.Language.values()).map(Programmer.Language::name).collect(Collectors.toList());
+        ComboBoxLanguage.getItems().addAll(languageValues);
+
+        List<String> specValues = Stream.of(Consultant.Specialization.values()).map(Consultant.Specialization::name).collect(Collectors.toList());
+        ComboBoxSpecialization.getItems().addAll(specValues);
+
+        SpinnerValueFactory<Integer> possibleValues = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100,1);
+        SpinnerYearsOfExperience.setValueFactory(possibleValues);
+
+        SpinnerValueFactory<Integer> possibleValues2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,1000,20);
+        SpinnerDailyWage.setValueFactory(possibleValues2);
+    }
+
+
 
     @FXML
     void ButtonAddOnAction(ActionEvent event) {
