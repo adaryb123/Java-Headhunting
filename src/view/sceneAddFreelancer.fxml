@@ -6,66 +6,142 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneAddFreelancer">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneAddFreelancer">
    <children>
-      <ScrollPane hbarPolicy="NEVER" layoutY="1.0" prefHeight="987.0" prefWidth="594.0">
+      <ScrollPane hbarPolicy="NEVER" layoutY="1.0" prefHeight="700.0" prefWidth="1000.0">
          <content>
-            <AnchorPane prefHeight="878.0" prefWidth="591.0">
+            <AnchorPane prefHeight="1300.0" prefWidth="1000.0" style="-fx-background-color: #1911ff;">
                <children>
-                  <Label layoutX="108.0" layoutY="41.0" text="Full name" />
-                  <Group fx:id="GroupAdministrator" disable="true" layoutX="113.0" layoutY="499.0">
+                  <Label layoutX="323.0" layoutY="52.0" text="Full name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Group fx:id="GroupAdministrator" disable="true" layoutX="661.0" layoutY="290.0">
                      <children>
-                        <TextField fx:id="TextFieldPreferredPlatform" layoutX="130.0" layoutY="40.0" />
-                        <Label layoutX="19.0" layoutY="4.0" text="Specialization" />
-                        <Label layoutY="36.0" text="Preferred platform" />
+                        <TextField fx:id="TextFieldPreferredPlatform" layoutX="130.0" layoutY="40.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="19.0" layoutY="4.0" text="Specialization" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="-14.0" layoutY="46.0" text="Preferred platform" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
                         <ComboBox fx:id="ComboBoxSpecialization" layoutX="129.0" prefWidth="150.0" />
                      </children>
                   </Group>
-                  <Label layoutY="83.0" text="Required daily wage (EUR/day)" />
-                  <Label layoutX="56.0" layoutY="119.0" text="Years of experience" />
-                  <Label layoutX="108.0" layoutY="154.0" text="Education" />
-                  <Spinner fx:id="SpinnerYearsOfExperience" editable="true" layoutX="205.0" layoutY="115.0" />
-                  <Spinner fx:id="SpinnerDailyWage" editable="true" layoutX="205.0" layoutY="79.0" />
-                  <RadioButton fx:id="RadioButtonProgrammer" layoutX="199.0" layoutY="242.0" mnemonicParsing="false" onAction="#RadioButtonProgrammerOnAction" selected="true" text="Programmer">
+                  <Label layoutX="194.0" layoutY="93.0" text="Required daily wage (EUR/day)" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="263.0" layoutY="129.0" text="Years of experience" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="322.0" layoutY="173.0" text="Education" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Spinner fx:id="SpinnerYearsOfExperience" editable="true" layoutX="420.0" layoutY="126.0" />
+                  <Spinner fx:id="SpinnerDailyWage" editable="true" layoutX="420.0" layoutY="90.0" />
+                  <RadioButton fx:id="RadioButtonProgrammer" layoutX="124.0" layoutY="260.0" mnemonicParsing="false" onAction="#RadioButtonProgrammerOnAction" selected="true" text="Programmer" textFill="WHITE">
                      <toggleGroup>
                         <ToggleGroup fx:id="ToggleGroup3Buttons" />
-                     </toggleGroup></RadioButton>
-                  <RadioButton fx:id="RadioButtonAdministrator" layoutX="196.0" layoutY="460.0" mnemonicParsing="false" onAction="#RadioButtonAdministratorOnAction" text="Administrator" toggleGroup="$ToggleGroup3Buttons" />
-                  <RadioButton fx:id="RadioButtonConsultant" layoutX="201.0" layoutY="315.0" mnemonicParsing="false" onAction="#RadioButtonConsultantOnAction" text="Consultant" toggleGroup="$ToggleGroup3Buttons" />
-                  <Label layoutX="234.0" layoutY="208.0" text="Pick category" />
-                  <Group fx:id="GroupConsultant" disable="true" layoutX="161.0" layoutY="345.0">
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="RadioButtonAdministrator" layoutX="735.0" layoutY="260.0" mnemonicParsing="false" onAction="#RadioButtonAdministratorOnAction" text="Administrator" textFill="WHITE" toggleGroup="$ToggleGroup3Buttons">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="RadioButtonConsultant" layoutX="422.0" layoutY="260.0" mnemonicParsing="false" onAction="#RadioButtonConsultantOnAction" text="Consultant" textFill="WHITE" toggleGroup="$ToggleGroup3Buttons">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></RadioButton>
+                  <Label layoutX="441.0" layoutY="216.0" prefHeight="27.0" prefWidth="133.0" text="Pick category" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Group fx:id="GroupConsultant" disable="true" layoutX="358.0" layoutY="290.0">
                      <children>
-                        <Label text="Also a NBU kybersecurity auditor?" />
-                        <RadioButton fx:id="RadioButtonYes" layoutX="92.0" layoutY="36.0" mnemonicParsing="false" selected="true" text="Yes">
+                        <Label text="Also a NBU kybersecurity auditor?" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <RadioButton fx:id="RadioButtonYes" layoutX="92.0" layoutY="36.0" mnemonicParsing="false" selected="true" text="Yes" textFill="WHITE">
                            <toggleGroup>
                               <ToggleGroup fx:id="ToggleGroup2Buttons" />
                            </toggleGroup>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
                         </RadioButton>
-                        <RadioButton fx:id="RadioButtonNo" layoutX="93.0" layoutY="45.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="77.0" text="No" toggleGroup="$ToggleGroup2Buttons" />
+                        <RadioButton fx:id="RadioButtonNo" layoutX="93.0" layoutY="45.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="77.0" text="No" textFill="WHITE" toggleGroup="$ToggleGroup2Buttons">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></RadioButton>
                      </children>
                   </Group>
-                  <TextField fx:id="TextFieldFullName" layoutX="205.0" layoutY="37.0" />
-                  <Separator layoutY="577.0" prefWidth="1000.0" />
-                  <Label layoutX="221.0" layoutY="594.0" text="Certificates" />
-                  <Label layoutX="153.0" layoutY="623.0" text="Certificate name" />
-                  <TextField fx:id="TextFieldCertificate" layoutX="94.0" layoutY="651.0" />
-                  <Button fx:id="ButtonAdd" layoutX="202.0" layoutY="686.0" mnemonicParsing="false" onAction="#ButtonAddOnAction" text="Add" />
-                  <TextArea fx:id="TextAreaCertificates" layoutX="266.0" layoutY="628.0" prefHeight="179.0" prefWidth="322.0" />
-                  <Button fx:id="ButtonSubmit" layoutX="278.0" layoutY="831.0" mnemonicParsing="false" onAction="#ButtonSubmitOnAction" text="Submit" />
-                  <ComboBox fx:id="ComboBoxEducation" layoutX="204.0" layoutY="159.0" prefWidth="150.0" />
-                  <Group fx:id="GroupProgrammer" layoutX="134.0" layoutY="276.0">
+                  <TextField fx:id="TextFieldFullName" layoutX="420.0" layoutY="48.0" prefHeight="30.0" prefWidth="353.0" AnchorPane.leftAnchor="420.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="446.0" layoutY="405.0" text="Certificates" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="239.0" layoutY="439.0" text="Certificate name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="TextFieldCertificate" layoutX="180.0" layoutY="467.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Button fx:id="ButtonAdd" layoutX="266.0" layoutY="504.0" mnemonicParsing="false" onAction="#ButtonAddOnAction" prefHeight="30.0" prefWidth="89.0" text="Add">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <TextArea fx:id="TextAreaCertificates" layoutX="371.0" layoutY="439.0" prefHeight="179.0" prefWidth="322.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextArea>
+                  <Button fx:id="ButtonSubmit" layoutX="442.0" layoutY="634.0" mnemonicParsing="false" onAction="#ButtonSubmitOnAction" prefHeight="30.0" prefWidth="90.0" text="Submit">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <ComboBox fx:id="ComboBoxEducation" layoutX="419.0" layoutY="170.0" prefWidth="150.0" />
+                  <Group fx:id="GroupProgrammer" layoutX="25.0" layoutY="289.0">
                      <children>
-                        <Label layoutY="4.0" prefHeight="17.0" prefWidth="95.0" text="Preffered language" />
-                        <ComboBox fx:id="ComboBoxLanguage" layoutX="128.0" prefHeight="26.0" prefWidth="138.0" />
+                        <Label layoutX="-9.0" layoutY="5.0" text="Preferred language" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="ComboBoxLanguage" layoutX="133.0" layoutY="1.0" prefHeight="26.0" prefWidth="138.0" />
                      </children>
                   </Group>
+                  <Label layoutX="431.0" layoutY="14.0" text="Personal info" textFill="#ffffff08">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="437.0" layoutY="14.0" prefHeight="27.0" prefWidth="133.0" text="Personal info" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </content>
