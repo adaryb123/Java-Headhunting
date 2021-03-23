@@ -4,15 +4,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import model.JobOffer;
 
 public class ControllerItemJobOffer {
 
     @FXML
-    private Label LabelItemNumber;
+    private Label LabelJobOffer;
 
     @FXML
-    private Button ButtonDetails;
+    private Label LabelCompany;
+
+    @FXML
+    private ImageView ImageViewCompany;
 
     @FXML
     void ButtonDetailsOnAction(ActionEvent event) {
@@ -23,6 +28,8 @@ public class ControllerItemJobOffer {
 
     public void init(JobOffer jobOffer){
         this.jobOffer = jobOffer;
-        LabelItemNumber.setText(jobOffer.getJobTitle());
+        LabelJobOffer.setText(jobOffer.getJobTitle());
+        LabelCompany.setText(jobOffer.getCompany().getName());
+        ImageViewCompany.setImage(new Image(jobOffer.getCompany().getlogoImageURI()));
     }
 }

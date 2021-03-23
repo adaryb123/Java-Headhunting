@@ -2,19 +2,19 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<ScrollPane hbarPolicy="NEVER" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerWindow">
-   <content>
-      <BorderPane fx:id="BorderPaneContent" prefHeight="700.0" prefWidth="1000.0">
+
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerWindow">
+   <children>
+      <BorderPane fx:id="BorderPaneContent" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #5500ff;">
          <top>
             <HBox fx:id="HBoxHeader" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1000.0" spacing="20.0">
                <children>
-                  <Button fx:id="ButtonScreen1" mnemonicParsing="false" onAction="#ButtonScreen1OnAction" text="Screen1" />
-                  <Button fx:id="ButtonScreen2" mnemonicParsing="false" onAction="#ButtonScreen2OnAction" style="-fx-background-color: #6646db;" text="Screen2" textFill="#d9ad45" />
+                  <Button fx:id="ButtonHome" mnemonicParsing="false" onAction="#ButtonHomeOnAction" text="Home" />
                </children>
                <BorderPane.margin>
                   <Insets />
@@ -25,5 +25,5 @@
             </HBox>
          </top>
       </BorderPane>
-   </content>
-</ScrollPane>
+   </children>
+</AnchorPane>

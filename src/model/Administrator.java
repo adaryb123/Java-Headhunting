@@ -36,5 +36,6 @@ public class Administrator extends Freelancer{
         this.setCertificates(certificates);
         this.specializationField = specializationField;
         this.preferredPlatform = preferredPlatform;
+        this.setAvailable(true);
     }
 }

@@ -18,9 +18,6 @@ public class ControllerSceneAddCompany {
     private ImageView ImagePlaceholder;
 
     @FXML
-    private Button ButtonChooseFile;
-
-    @FXML
     private TextField TextFieldCompanyName;
 
     @FXML
@@ -28,9 +25,6 @@ public class ControllerSceneAddCompany {
 
     @FXML
     private Spinner<Integer> SpinnerEmployeesNumber;
-
-    @FXML
-    private Button ButtonSubmit;
 
     private String imageURI;
 

@@ -20,5 +20,6 @@ public class Consultant extends Freelancer{
         this.setHighestEducation(highestEducation);
         this.setCertificates(certificates);
         this.auditorNBU = auditorNBU;
+        this.setAvailable(true);
     }
 }

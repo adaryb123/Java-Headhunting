@@ -15,6 +15,15 @@ public abstract class Freelancer {
     }
     private Education highestEducation;
     private ArrayList<String> certificates;
+    boolean isAvailable;
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
 
     public String getName() {
         return name;

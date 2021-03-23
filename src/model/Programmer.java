@@ -30,5 +30,6 @@ public class Programmer extends Freelancer{
         this.setHighestEducation(highestEducation);
         this.setCertificates(certificates);
         this.preferredLanguage = preferredLanguage;
+        this.setAvailable(true);
     }
 }

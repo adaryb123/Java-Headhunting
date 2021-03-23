@@ -17,9 +17,6 @@ public class ControllerSceneAddJobOffer {
     private TextArea TextAreaInfo;
 
     @FXML
-    private Button ButtonSubmit;
-
-    @FXML
     private ComboBox<String> ComboBoxCompany;
 
     @FXML

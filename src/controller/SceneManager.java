@@ -9,18 +9,11 @@ import main.Main;
  * this class is based on code from https://www.youtube.com/watch?v=5yQbt6lYRqk
  */
 public class SceneManager {
-         private static Pane view;
 
-         public static FXMLLoader getPage(BorderPane parentPane, String fileName){
+         public static FXMLLoader switchBorderPane(BorderPane parentPane, String fileName){
              FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource( "/view/" + fileName + ".fxml"));
              try{
-               /*  URL fileURL = Main.class.getResource( "/view/" + fileName + ".fxml");
-                 if (fileURL == null)
-                     throw new FileNotFoundException("Cannot find FXML file");
-                 Pane childPane = fxmlLoader.load(fileURL);*/
                  Pane childPane = fxmlLoader.load();
-                 //parentPane.getChildren().clear();
-                // parentPane.getChildren().add(childPane);
                  parentPane.setCenter(childPane);
              }
              catch (Exception e) {
@@ -29,17 +22,12 @@ public class SceneManager {
              return fxmlLoader;
          }
 
-    public static FXMLLoader getPage2(Pane parentPane, String fileName){
+    public static FXMLLoader switchListingPane(Pane parentPane, String fileName){
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource( "/view/" + fileName + ".fxml"));
         try{
-               /*  URL fileURL = Main.class.getResource( "/view/" + fileName + ".fxml");
-                 if (fileURL == null)
-                     throw new FileNotFoundException("Cannot find FXML file");
-                 Pane childPane = fxmlLoader.load(fileURL);*/
             Pane childPane = fxmlLoader.load();
             parentPane.getChildren().clear();
             parentPane.getChildren().add(childPane);
-            // parentPane.setCenter(childPane);
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
