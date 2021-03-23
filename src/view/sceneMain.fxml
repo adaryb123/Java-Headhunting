@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneMain">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1000.0" style="-fx-background-color: #5500ff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneMain">
    <children>
       <Button fx:id="ButtonAddFreelancer" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddFreelancerOnAction" prefHeight="45.0" prefWidth="125.0" text="Add freelancer" />
       <Button fx:id="ButtonAddCompany" layoutX="192.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddCompanyOnAction" prefHeight="45.0" prefWidth="125.0" text="Add company" />
       <Button fx:id="ButtonAddJobOffer" layoutX="360.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddJobOfferOnAction" prefHeight="45.0" prefWidth="125.0" text="Add job offer" />
+      <ScrollPane fx:id="ScrollPane" hbarPolicy="NEVER" layoutX="113.0" layoutY="145.0" prefHeight="425.0" prefWidth="862.0">
+         <content>
+            <AnchorPane prefHeight="100.0" prefWidth="861.0">
+               <children>
+                  <HBox fx:id="scrollHbox" prefHeight="100.0" prefWidth="323.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
