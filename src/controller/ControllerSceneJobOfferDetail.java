@@ -80,7 +80,7 @@ public class ControllerSceneJobOfferDetail {
             selectedFreelancers.addAll(TableViewAvailableFreelancers.getSelectionModel().getSelectedItems());
             for (Freelancer f: selectedFreelancers)
                 f.setAvailable(false);
-            DataStorage.updateAvailableFreelancers(selectedFreelancers);
+            DataStorage.updateAvailableFreelancers(selectedFreelancers,false);
 
             ArrayList<Contract> contracts = DataStorage.getContracts();
             contracts.add(new Contract(jobOffer,selectedFreelancers));

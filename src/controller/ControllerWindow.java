@@ -25,30 +25,31 @@ public class ControllerWindow {
     public void switchToAddFreelancer(){
         FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent,"sceneAddFreelancer");
         ((ControllerSceneAddFreelancer) fxmlLoader.getController()).init();
-        //BorderPaneContent.setCenter(view);
     }
 
     public void switchToAddCompany(){
         FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent,"sceneAddCompany");
         ((ControllerSceneAddCompany) fxmlLoader.getController()).init();
-        //BorderPaneContent.setCenter(view);
     }
 
     public void switchToAddJobOffer(){
         FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent,"sceneAddJobOffer");
         ((ControllerSceneAddJobOffer) fxmlLoader.getController()).init();
-        //BorderPaneContent.setCenter(view);
     }
+
     public void switchToMain() {
         FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent, "sceneMain");
         ((ControllerSceneMain) fxmlLoader.getController()).init();
-        //BorderPaneContent.setCenter(view);
     }
+
     public void switchToJobOfferDetail(JobOffer jobOffer) {
         FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent, "sceneJobOfferDetail");
         ((ControllerSceneJobOfferDetail) fxmlLoader.getController()).init(jobOffer);
-        //BorderPaneContent.setCenter(view);
     }
 
-
+    public void switchToContracts() {
+        FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent, "sceneContracts");
+        ((ControllerSceneContracts) fxmlLoader.getController()).init();
     }
+
+}

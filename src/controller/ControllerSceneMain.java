@@ -36,6 +36,11 @@ public class ControllerSceneMain {
         WindowReference.getParentController().switchToAddJobOffer();
     }
 
+    @FXML
+    void ButtonViewContractsOnAction(ActionEvent event) {
+        WindowReference.getParentController().switchToContracts();
+    }
+
     /*
     this code is based on code from previous project, https://github.com/DavidSilady/FreelancePortalJava
      */

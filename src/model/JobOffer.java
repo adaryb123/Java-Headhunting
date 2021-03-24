@@ -1,9 +1,13 @@
 package model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class JobOffer {
     private Company company;
     private String jobTitle;
     private String info;
+
 
     public JobOffer(Company company, String jobTitle, String info) {
         this.company = company;

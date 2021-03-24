@@ -95,11 +95,11 @@ public class DataStorage {
         return available;
     }
 
-    public static void updateAvailableFreelancers(ArrayList<Freelancer> assignedFreelancers){
-        for (Freelancer assignedf: assignedFreelancers){
+    public static void updateAvailableFreelancers(ArrayList<Freelancer> assignedFreelancers, boolean value){
+        for (Freelancer assignedF: assignedFreelancers){
             for (Freelancer f: freelancers){
-                if (assignedf.getName().equals(f.getName())){
-                    f.setAvailable(false);
+                if (assignedF.getName().equals(f.getName())){
+                    f.setAvailable(value);
                     break;
                 }
             }

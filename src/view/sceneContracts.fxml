@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.SceneContracts"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #5500ff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneContracts">
+   <children>
+      <TableView fx:id="TableViewContracts" layoutX="36.0" layoutY="44.0" prefHeight="612.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="TableColumnPosition" prefWidth="208.8000144958496" text="Position" />
+          <TableColumn fx:id="TableColumnCompany" prefWidth="133.59999084472656" text="Company" />
+            <TableColumn fx:id="TableColumnDate" prefWidth="134.39999389648438" text="Date of creation" />
+            <TableColumn fx:id="TableColumnFreelancers" prefWidth="87.20001220703125" text="Freelancers" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="TextAreaFreelancers" layoutX="637.0" layoutY="169.0" prefHeight="318.0" prefWidth="314.0" />
+      <Label alignment="CENTER" layoutX="637.0" layoutY="128.0" prefHeight="20.0" prefWidth="314.0" text="Freelancers on this contract" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="637.0" layoutY="527.0" mnemonicParsing="false" onAction="#ButtonEndContractOnAction" text="End selected contract">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label alignment="TOP_LEFT" layoutX="637.0" layoutY="580.0" prefHeight="67.0" prefWidth="338.0" text="Note: Ending a contract will mark the freelancers available again" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="33.0" layoutY="4.0" prefHeight="20.0" prefWidth="570.0" text="All contracts" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="637.0" layoutY="44.0" mnemonicParsing="false" onAction="#ButtonViewFreelancersOnAction" text="View freelancers">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
