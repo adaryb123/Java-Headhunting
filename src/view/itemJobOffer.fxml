@@ -9,22 +9,25 @@
    <children>
       <AnchorPane layoutX="29.0" layoutY="25.0" prefHeight="150.0" prefWidth="940.0" style="-fx-background-color: #69d943;">
          <children>
-            <Label fx:id="LabelJobOffer" alignment="CENTER" layoutX="218.0" layoutY="65.0" prefHeight="70.0" prefWidth="566.0" text="JOB OFFER NAME" textFill="WHITE">
+            <Label fx:id="LabelJobOffer" alignment="CENTER" layoutX="218.0" layoutY="65.0" prefHeight="70.0" prefWidth="566.0" text="JOB OFFER NAME" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="ButtonDetails" layoutX="810.0" layoutY="57.0" mnemonicParsing="false" onAction="#ButtonDetailsOnAction" prefHeight="30.0" prefWidth="90.0" text="Details">
+            <Button fx:id="ButtonDetails" layoutX="802.0" layoutY="56.0" mnemonicParsing="false" onAction="#ButtonDetailsOnAction" prefHeight="39.0" prefWidth="106.0" text="Details">
                <font>
-                  <Font size="14.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
-            <Label fx:id="LabelCompany" layoutX="218.0" layoutY="16.0" prefHeight="27.0" prefWidth="566.0" text="COMPANY NAME" textFill="WHITE">
+            <Label fx:id="LabelCompany" layoutX="218.0" layoutY="16.0" prefHeight="27.0" prefWidth="566.0" text="COMPANY NAME" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <ImageView fx:id="ImageViewCompany" fitHeight="119.0" fitWidth="119.0" layoutX="19.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane prefHeight="150.0" prefWidth="171.0" style="-fx-background-color: #000000;">
+               <children>
+                  <ImageView fx:id="ImageViewCompany" fitHeight="121.0" fitWidth="120.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
          </children>
       </AnchorPane>
    </children>

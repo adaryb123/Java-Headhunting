@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import model.JobOffer;
@@ -18,7 +19,7 @@ public class ControllerWindow {
     }
 
     @FXML
-    void ButtonHomeOnAction(ActionEvent event) {
+    void ButtonHomeOnAction(MouseEvent event) {
         switchToMain();
     }
 

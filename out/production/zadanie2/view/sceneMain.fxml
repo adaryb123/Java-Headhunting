@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1000.0" style="-fx-background-color: #5500ff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneMain">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1000.0" style="-fx-background-color: #5500ff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneMain">
    <children>
-      <Button fx:id="ButtonAddFreelancer" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddFreelancerOnAction" prefHeight="45.0" prefWidth="125.0" text="Add freelancer" />
-      <Button fx:id="ButtonAddCompany" layoutX="192.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddCompanyOnAction" prefHeight="45.0" prefWidth="125.0" text="Add company" />
-      <Button fx:id="ButtonAddJobOffer" layoutX="360.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddJobOfferOnAction" prefHeight="45.0" prefWidth="125.0" text="Add job offer" />
+      <Button fx:id="ButtonAddFreelancer" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddFreelancerOnAction" prefHeight="46.0" prefWidth="161.0" text="Add freelancer">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="ButtonAddCompany" layoutX="232.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddCompanyOnAction" prefHeight="46.0" prefWidth="162.0" text="Add company">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="ButtonAddJobOffer" layoutX="439.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonAddJobOfferOnAction" prefHeight="46.0" prefWidth="162.0" text="Add job offer">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       <ScrollPane hbarPolicy="NEVER" layoutX="-4.0" layoutY="89.0" prefHeight="584.0" prefWidth="1009.0" style="-fx-background-color: #5500ff;">
          <content>
             <AnchorPane prefHeight="100.0" prefWidth="861.0" style="-fx-background-color: #5500ff;">
@@ -19,5 +27,9 @@
             </AnchorPane>
          </content>
       </ScrollPane>
+      <Button fx:id="ButtonViewContracts" layoutX="647.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonViewContractsOnAction" prefHeight="46.0" prefWidth="162.0" text="View contracts">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
    </children>
 </AnchorPane>

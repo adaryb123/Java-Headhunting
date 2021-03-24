@@ -10,54 +10,54 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #5500ff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSceneJobOfferDetail">
    <children>
-      <Label fx:id="LabelJobOfferName" alignment="CENTER" layoutX="22.0" prefHeight="55.0" prefWidth="956.0" text="Label" textFill="WHITE">
+      <Label fx:id="LabelJobOfferName" alignment="CENTER" layoutX="22.0" layoutY="-21.0" prefHeight="55.0" prefWidth="956.0" text="Label" textFill="WHITE" wrapText="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="LabelCompanyName" alignment="CENTER" layoutX="22.0" layoutY="52.0" prefHeight="55.0" prefWidth="198.0" text="Label" textFill="WHITE">
+      <Label fx:id="LabelCompanyName" alignment="CENTER" layoutX="22.0" layoutY="31.0" prefHeight="55.0" prefWidth="198.0" text="Label" textFill="WHITE" wrapText="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="LabelJobOfferInfo" alignment="TOP_LEFT" layoutX="274.0" layoutY="72.0" prefHeight="206.0" prefWidth="704.0" text="Label" textFill="WHITE">
+      <Label fx:id="LabelJobOfferInfo" alignment="TOP_LEFT" layoutX="274.0" layoutY="51.0" prefHeight="206.0" prefWidth="704.0" text="Label" textFill="WHITE" wrapText="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <ImageView fx:id="ImageViewCompanyLogo" fitHeight="161.0" fitWidth="184.0" layoutX="44.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="LabelCompanyName1" alignment="CENTER" layoutX="59.0" layoutY="286.0" prefHeight="27.0" prefWidth="414.0" text="Freelancers on this job" textFill="WHITE">
+      <ImageView fx:id="ImageViewCompanyLogo" fitHeight="161.0" fitWidth="184.0" layoutX="44.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="LabelCompanyName1" alignment="CENTER" layoutX="59.0" layoutY="265.0" prefHeight="27.0" prefWidth="414.0" text="Freelancers on this job" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="LabelCompanyName11" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="286.0" prefHeight="27.0" prefWidth="414.0" text="Available freelancers" textFill="WHITE">
+      <Label fx:id="LabelCompanyName11" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="265.0" prefHeight="27.0" prefWidth="414.0" text="Available freelancers" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="52.0" layoutY="612.0" mnemonicParsing="false" onAction="#ButtonRemoveSelectedOnAction" prefHeight="30.0" prefWidth="138.0" text="Remove selected">
+      <Button layoutX="52.0" layoutY="591.0" mnemonicParsing="false" onAction="#ButtonRemoveSelectedOnAction" prefHeight="39.0" prefWidth="164.0" text="Remove selected">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="535.0" layoutY="612.0" mnemonicParsing="false" onAction="#ButtonAssignSelectedOnAction" prefHeight="30.0" prefWidth="138.0" text="Assign selected">
+      <Button layoutX="535.0" layoutY="591.0" mnemonicParsing="false" onAction="#ButtonAssignSelectedOnAction" prefHeight="39.0" prefWidth="170.0" text="Assign selected">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="327.0" layoutY="612.0" mnemonicParsing="false" onAction="#ButtonCreateContractOnAction" prefHeight="30.0" prefWidth="138.0" text="Create contract">
+      <Button layoutX="301.0" layoutY="591.0" mnemonicParsing="false" onAction="#ButtonCreateContractOnAction" prefHeight="39.0" prefWidth="164.0" text="Create contract">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="TableViewAssignedFreelancers" layoutX="50.0" layoutY="324.0" prefHeight="270.0" prefWidth="414.0">
+      <TableView fx:id="TableViewAssignedFreelancers" layoutX="50.0" layoutY="303.0" prefHeight="270.0" prefWidth="414.0">
         <columns>
           <TableColumn fx:id="TableAssignedColumnName" prefWidth="290.4000053405762" text="Name" />
           <TableColumn fx:id="TableAssignedColumnOccupation" minWidth="0.0" prefWidth="124.0" text="Occupation" />
         </columns>
       </TableView>
-      <TableView fx:id="TableViewAvailableFreelancers" layoutX="535.0" layoutY="324.0" prefHeight="270.0" prefWidth="414.0">
+      <TableView fx:id="TableViewAvailableFreelancers" layoutX="535.0" layoutY="303.0" prefHeight="270.0" prefWidth="414.0">
          <columns>
             <TableColumn fx:id="TableAvailableColumnName" prefWidth="290.4000053405762" text="Name" />
             <TableColumn fx:id="TableAvailableColumnOccupation" minWidth="0.0" prefWidth="124.0" text="Occupation" />
