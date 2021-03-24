@@ -40,7 +40,6 @@ public class ControllerSceneMain {
     this code is based on code from previous project, https://github.com/DavidSilady/FreelancePortalJava
      */
     public void init(){
-        DataStorage.createInitialData();
         jobOffers = DataStorage.getJobOffers();
 
         VBoxItemHolder.getChildren().clear();

@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.*;
 
 import java.util.ArrayList;
@@ -11,6 +13,10 @@ public class DataStorage {
     public static ArrayList<JobOffer> jobOffers = new ArrayList<>();
 
     private DataStorage() {
+    }
+
+    static{
+        createInitialData();
     }
 
     public static ArrayList<Freelancer> getFreelancers() {
@@ -78,5 +84,25 @@ public class DataStorage {
         jobOffers.add(jobOffer3);
         jobOffers.add(jobOffer4);
         jobOffers.add(jobOffer5);
+    }
+
+    public static ArrayList<Freelancer> getAvailableFreelancers(){
+        ArrayList<Freelancer> available = new ArrayList<>();
+        for (Freelancer f : freelancers){
+            if (f.isAvailable())
+                available.add(f);
+        }
+        return available;
+    }
+
+    public static void updateAvailableFreelancers(ArrayList<Freelancer> assignedFreelancers){
+        for (Freelancer assignedf: assignedFreelancers){
+            for (Freelancer f: freelancers){
+                if (assignedf.getName().equals(f.getName())){
+                    f.setAvailable(false);
+                    break;
+                }
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ public class ControllerItemJobOffer {
 
     @FXML
     void ButtonDetailsOnAction(ActionEvent event) {
-        System.out.println("CLICKED " + jobOffer.getJobTitle());
+        WindowReference.getParentController().switchToJobOfferDetail(jobOffer);
     }
 
     JobOffer jobOffer;

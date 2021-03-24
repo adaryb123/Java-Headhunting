@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import model.JobOffer;
 
 public class ControllerWindow {
 
@@ -43,7 +44,11 @@ public class ControllerWindow {
         ((ControllerSceneMain) fxmlLoader.getController()).init();
         //BorderPaneContent.setCenter(view);
     }
-
+    public void switchToJobOfferDetail(JobOffer jobOffer) {
+        FXMLLoader fxmlLoader = SceneManager.switchBorderPane(BorderPaneContent, "sceneJobOfferDetail");
+        ((ControllerSceneJobOfferDetail) fxmlLoader.getController()).init(jobOffer);
+        //BorderPaneContent.setCenter(view);
+    }
 
 
     }
